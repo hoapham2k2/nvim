@@ -15,7 +15,7 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader><leader>", function()
 	vim.cmd("so")
 	print("Hoa Pham was sourced")
-end , { desc = "Source the current file" })
+end, { desc = "Source the current file" })
 
 --this config will make the cursor stay in the middle of the screen when you press <C-d> or <C-u>
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -24,14 +24,15 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 -- Move selected line / block of text in visual mode (V) up or down
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
- 
+
 vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Paste without yanking" })
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Join lines and keep cursor position" })
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]], { desc = "Yank to system clipboard" })
-vim.keymap.set("n", "<leader>Y", [["+Y]],{ desc = "Yank to system clipboard" })
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to system clipboard" })
+vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank to system clipboard" })
 
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]], { desc = "Delete without yanking" })
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete without yanking" })
 
+vim.keymap.set("n", "<C-w>", "<cmd>bd<CR>", { desc = "Delete buffer" })
